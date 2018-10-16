@@ -1,0 +1,68 @@
+{
+  "src_folders" : ["test/acceptance"],
+  "output_folder" : "reports",
+  "custom_commands_path" : "test/acceptance/commands",
+  "custom_assertions_path" : "",
+  "page_objects_path" : "test/acceptance/page-objects",
+
+  "globals_path" : "",
+
+
+  "selenium" : {
+    "start_process": true,
+    "server_path": "./node_modules/selenium-standalone/.selenium/selenium-server/3.12.0-server.jar",
+    "log_path": "./build-output",
+    "host": "127.0.0.1",
+    "port": 4444,
+    "cli_args": {
+      "webdriver.chrome.driver": "./node_modules/selenium-standalone/.selenium/chromedriver/2.41-x64-chromedriver"
+    }
+  },
+  
+  "test_runner" : {
+    "type" : "mocha",
+    "options" : {
+      "ui" : "bdd",
+      "reporter" : "list"
+    }
+  },
+  
+  "test_settings" : {
+    "default" : {
+      "launch_url" : "http://localhost:3001",
+      "selenium_port"  : 4444,
+      "selenium_host"  : "localhost",
+      "silent": true,
+      "screenshots" : {
+        "enabled" : false,
+        "path" : ""
+      },
+      "desiredCapabilities": {
+        "browserName": "firefox",
+        "marionette": true
+      }
+    },
+
+    "chrome" : {
+      "desiredCapabilities": {
+        "browserName": "chrome",
+        "chromeOptions": {
+          "prefs": {
+            "intl": {
+              "accept_languages": "en-US"
+            }
+          },
+          "args": [
+            "--window-size=1920,1280"
+          ]
+        }
+      }
+    },   
+
+    "edge" : {
+      "desiredCapabilities": {
+        "browserName": "MicrosoftEdge"
+      }
+    }
+  }
+}
