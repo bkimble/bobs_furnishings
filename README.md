@@ -1,5 +1,11 @@
 # Bob's Furnishings
 
+
+## requirements
+
+* Node 8.12.0
+* Mysql
+
 ## TODO
 
 * [ ] React Component tests
@@ -28,4 +34,3 @@
 
 
 
-# bobs_furnishings
